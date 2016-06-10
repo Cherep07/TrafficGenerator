@@ -9,3 +9,4 @@ compiler:
 
 script:
   - make
+  - make tgr
