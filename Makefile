@@ -1,16 +1,14 @@
 APPNAME=tgr
-
 default:
 	@echo "List of targets:"
-	@echo "	tgr	-	build tgr targets"
+	@echo "	tgr 	-	build tgr targets"
+	@echo "	clean 	-	clean all targets"
 
-$(OBJDIR)/%.o: %.cpp
-	${CXX} ${CFLAGS} $^
-#	$(CXX) -c -o $@ $< $(CCFLAGS)	
-	
-$(APPNAME): main.o
-	@echo ${OBJS}
-	$(CXX) $(LDFLAGS) -o $@ $^  
+SOURCE=main.cpp main.hpp
+CFLAGS=-Wall
+		
+$(APPNAME): ${SOURCE}
+	$(CXX) ${CFLAGS} -o $@ $^  
 		
 clean:
 	rm -rf *.o ${APPNAME}
