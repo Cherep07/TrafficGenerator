@@ -1,4 +1,4 @@
-#include <cxxtest/cxxtest/TestSuite.h>
+#include <cxxtest/TestSuite.h>
  
 class MyTestSuite : public CxxTest::TestSuite 
 {
