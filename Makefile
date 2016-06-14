@@ -8,7 +8,7 @@ default:
 	@echo "    clean    - clean all targets"
 
 SRCDIR=src
-CFLAGS=-Wall
+CFLAGS=-Wall -Weffc++
 		
 $(APPNAME): ${SRCDIR}/*.cpp
 	$(CXX) ${CFLAGS} -o $@ $^  
@@ -22,3 +22,4 @@ ut:
 	
 clean:
 	rm -rf *.o ${APPNAME}
+	make -f ut.mk clean

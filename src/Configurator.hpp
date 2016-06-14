@@ -1,4 +1,7 @@
 
+#ifndef CONFIGURATOR_HPP
+#define CONFIGURATOR_HPP
+
 class Configurator
 {
 	public:
@@ -8,3 +11,5 @@ class Configurator
 	private:
 		int param;
 };
+
+#endif //CONFIGURATOR_HPP

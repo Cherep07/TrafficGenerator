@@ -1,5 +1,4 @@
 
-#include <cxxtest/TestSuite.h>
 #include "Configurator.hpp"
 
 class ConfiguratorTestSuite : public CxxTest::TestSuite 

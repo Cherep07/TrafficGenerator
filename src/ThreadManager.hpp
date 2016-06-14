@@ -1,0 +1,7 @@
+
+#ifndef THREAD_MANAGER_HPP
+#define THREAD_MANAGER_HPP
+
+
+
+#endif //THREAD_MANAGER_HPP

@@ -4,7 +4,7 @@ UTAPPNAME=utest
 
 
 .PHONY: unittest.cpp
-unittest.cpp: UT/ut_*.hpp
+unittest.cpp: UT/ut*.hpp
 	@echo "Translating test" 
 	cxxtest/bin/cxxtestgen --error-printer -o unittest.cpp $^  
 	
@@ -16,3 +16,7 @@ exec_ut:
 	./$(UTAPPNAME)
 
 ut: build_ut exec_ut
+
+clean:
+	rm -rf unittest.cpp
+	rm -rf $(UTAPPNAME)
