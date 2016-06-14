@@ -11,7 +11,7 @@ SRCDIR=src
 CFLAGS=-Wall -Weffc++
 		
 $(APPNAME): ${SRCDIR}/*.cpp
-	$(CXX) ${CFLAGS} -o $@ $^  
+	$(CXX) -std=c++14 ${CFLAGS} -o $@ $^  
 		
 exec:
 	./$(APPNAME)

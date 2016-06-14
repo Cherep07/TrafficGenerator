@@ -1,8 +1,6 @@
 
 UTAPPNAME=utest
 
-
-
 .PHONY: unittest.cpp
 unittest.cpp: UT/ut*.hpp
 	@echo "Translating test" 
@@ -10,7 +8,7 @@ unittest.cpp: UT/ut*.hpp
 	
 build_ut: unittest.cpp
 	@echo "Compiling test" 
-	${CXX} -o ${UTAPPNAME} -DCXXTEST_RUNNING -Icxxtest -Isrc unittest.cpp src/*.cpp
+	${CXX} -std=c++14 -o ${UTAPPNAME} -DCXXTEST_RUNNING -Icxxtest -Isrc unittest.cpp src/*.cpp
 		
 exec_ut:
 	./$(UTAPPNAME)
