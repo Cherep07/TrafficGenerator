@@ -7,11 +7,10 @@ default:
 	@echo "    ut       - execute unit tests"
 	@echo "    clean    - clean all targets"
 
-SOURCES=main.cpp
 SRCDIR=src
 CFLAGS=-Wall
 		
-$(APPNAME): ${SRCDIR}/${SOURCES}
+$(APPNAME): ${SRCDIR}/*.cpp
 	$(CXX) ${CFLAGS} -o $@ $^  
 		
 exec:

@@ -1,7 +1,8 @@
-#include <cxxtest/TestSuite.h>
-#include "main.cpp"
 
-class MyTestSuite : public CxxTest::TestSuite 
+#include <cxxtest/TestSuite.h>
+#include "Configurator.hpp"
+
+class ConfiguratorTestSuite : public CxxTest::TestSuite 
 {
 public:
   void testAddition( void )
