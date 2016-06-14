@@ -4,6 +4,9 @@ UTAPPNAME=utest
 .PHONY: unittest.cpp
 unittest.cpp: UT/ut_main.hpp
 	@echo "Translating test" 
+	ls;
+	ls cxxtest;
+	ls cxxtest/bin;
 	cxxtest/bin/cxxtestgen --error-printer -o unittest.cpp UT/ut_main.hpp 
 	
 build_ut: unittest.cpp
