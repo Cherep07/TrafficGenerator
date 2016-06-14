@@ -2,7 +2,7 @@
 #ifndef THREAD_MANAGER_HPP
 #define THREAD_MANAGER_HPP
 
-#include <functional>
+#include "PacketGenerator.hpp"
 
 class TrafficParams
 {
@@ -24,7 +24,7 @@ class TrafficThread
 {
 	public:
 		TrafficThread();
-		virtual ~TrafficThread();
+		~TrafficThread();
 
 };
 
@@ -34,7 +34,7 @@ class ClientThread: public TrafficThread
 		ClientThread();
 	private:
 		int currntPacketNumber;
-		std::function<char* (int)> packetGenerator;
+		PacketGenerator * packetGenerator;
 		TrafficParams params;
 };
 
