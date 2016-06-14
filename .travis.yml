@@ -3,6 +3,15 @@ language: cpp
 os:
   - linux
 
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+    - gcc-4.8
+    - python3
+	
 compiler:
   - gcc
   - clang
@@ -13,7 +22,7 @@ before_install:
 script:
   - make
   - make tgr
-  - ./configure --enable-gcov && make ut
+  - ./configure --enable-gcov && make && make check
   - make ut
 
 after_success:
