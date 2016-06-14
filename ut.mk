@@ -8,7 +8,7 @@ unittest.cpp: UT/ut*.hpp
 	
 build_ut: unittest.cpp
 	@echo "Compiling test" 
-	${CXX} -std=c++14 -o ${UTAPPNAME} -DCXXTEST_RUNNING -Icxxtest -Isrc unittest.cpp src/*.cpp
+	${CXX} -std=c++11 -o ${UTAPPNAME} -DCXXTEST_RUNNING -Icxxtest -Isrc unittest.cpp src/*.cpp
 		
 exec_ut:
 	./$(UTAPPNAME)

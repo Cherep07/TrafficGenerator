@@ -1,6 +1,7 @@
 APPNAME=tgr
 
 default:
+	gcc --version
 	@echo "List of targets:"
 	@echo "    tgr      - build tgr targets"
 	@echo "    exec     - execute tgr targets"	
@@ -11,7 +12,7 @@ SRCDIR=src
 CFLAGS=-Wall -Weffc++
 		
 $(APPNAME): ${SRCDIR}/*.cpp
-	$(CXX) -std=c++14 ${CFLAGS} -o $@ $^  
+	$(CXX) -std=c++11 ${CFLAGS} -o $@ $^  
 		
 exec:
 	./$(APPNAME)
