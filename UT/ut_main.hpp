@@ -1,5 +1,5 @@
 #include <cxxtest/TestSuite.h>
-#include "main.hpp"
+#include "main.cpp"
 
 class MyTestSuite : public CxxTest::TestSuite 
 {
@@ -11,10 +11,10 @@ public:
   }
   void testTrue(void)
   {
-	  TS_ASSERT_EQUALS(5, dummy_function());
+	  TS_ASSERT_EQUALS(5, Configurator::dummy_function());
   }
   void testFalse(void)
   {
-	  TS_ASSERT_EQUALS(4, dummy_function());
+	  TS_ASSERT_DIFFERS(4, Configurator::dummy_function());
   }
 };

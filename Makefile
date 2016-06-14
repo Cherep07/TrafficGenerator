@@ -8,9 +8,10 @@ default:
 	@echo "    clean    - clean all targets"
 
 SOURCES=main.cpp
+SRCDIR=src
 CFLAGS=-Wall
 		
-$(APPNAME): ${SOURCES}
+$(APPNAME): ${SRCDIR}/${SOURCES}
 	$(CXX) ${CFLAGS} -o $@ $^  
 		
 exec:

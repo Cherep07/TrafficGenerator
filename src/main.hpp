@@ -1,2 +1,8 @@
 
-int dummy_function();
+class Configurator
+{
+	public:
+		static int dummy_function();
+	private:
+		int param;
+};

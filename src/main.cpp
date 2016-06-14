@@ -4,17 +4,17 @@
 
 #define LOG(SEVERITY)  std::cout << std::endl << "(SEVERITY) "
 
-int dummy_function()
+int Configurator::dummy_function()
 {
 	return 5;
 }
 
 void init()
 {
-	
 	return;
 }
 
+#ifndef CXXTEST_RUNNING
 int main(void)
 {
 	//int i = 0;
@@ -23,3 +23,4 @@ int main(void)
 	std::cout << std::endl;
 	return 0;
 }
+#endif
