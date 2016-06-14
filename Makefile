@@ -1,7 +1,7 @@
 APPNAME=tgr
 
 default:
-	gcc --version
+	$(CXX) --version
 	@echo "List of targets:"
 	@echo "    tgr      - build tgr targets"
 	@echo "    exec     - execute tgr targets"	
