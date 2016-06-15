@@ -20,11 +20,11 @@ class TrafficStats
 
 };
 
-class TrafficThread
+class TrafficThread: public NonCopyable
 {
 	public:
 		TrafficThread();
-		~TrafficThread();
+		virtual ~TrafficThread();
 
 };
 
@@ -32,7 +32,10 @@ class ClientThread: public TrafficThread
 {
 	public:
 		ClientThread();
+		~ClientThread();
 	private:
+		ClientThread(const ClientThread &) = delete;
+		ClientThread& operator= (const ClientThread &) = delete;
 		int currntPacketNumber;
 		PacketGenerator * packetGenerator;
 		TrafficParams params;

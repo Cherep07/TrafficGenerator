@@ -1,5 +1,6 @@
 
 #include <list>
+#include "GlobalDefs.hpp"
 #include "ThreadManager.hpp"
 
 
@@ -12,10 +13,15 @@ TrafficParams::TrafficParams():
 TrafficThread::TrafficThread()
 {}
 
+TrafficThread::~TrafficThread()
+{}
 ClientThread::ClientThread():
 	TrafficThread(),
 	currntPacketNumber(0), 
-	packetGenerator(nullptr)
+	packetGenerator(nullptr),
+	params()
 {}
 		
-		
+
+ClientThread::~ClientThread()
+{}		
