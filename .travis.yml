@@ -23,6 +23,7 @@ install:
   - gem install coveralls-lcov	
   
 before_script:
+  - export CXX=g++5
   - $CXX --version
   - echo $CXX 
 
