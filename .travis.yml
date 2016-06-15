@@ -3,25 +3,32 @@ language: cpp
 os:
   - linux
 
-before_install:
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq libyajl-dev libxml2-dev libxqilla-dev
-  - if [ "$CXX" = "clang++" ]; then sudo apt-get install -qq libstdc++-4.8-dev; fi
-  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
-
 compiler:
   - gcc
   - clang
+  
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-5
+    - g++-5
+	- valgrind
+	- gcovr
 
 before_install:
-  - pip install --user cpp-coveralls
   
+install: 
+  - gem install coveralls-lcov	
+  
+before_script:
+  - $CXX --version
+  - echo $CXX 
+
 script:
   - make
   - make tgr
-  - ./configure --enable-gcov && make && make check
   - make ut
 
 after_success:
