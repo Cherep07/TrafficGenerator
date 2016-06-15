@@ -2,6 +2,7 @@
 #ifndef THREAD_MANAGER_HPP
 #define THREAD_MANAGER_HPP
 
+#include "GlobalDefs.hpp"
 #include "PacketGenerator.hpp"
 
 class TrafficParams

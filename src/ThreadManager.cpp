@@ -1,6 +1,5 @@
 
 #include <list>
-#include "GlobalDefs.hpp"
 #include "ThreadManager.hpp"
 
 
