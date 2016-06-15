@@ -14,11 +14,11 @@ addons:
     packages:
     - gcc-5
     - g++-5
-	- valgrind
-	- gcovr
+    - valgrind
+    - gcovr
 
 before_install:
-  
+
 install: 
   - gem install coveralls-lcov	
   
