@@ -15,7 +15,7 @@ addons:
     - gcc-5
     - g++-5
     - valgrind
-    - gcovr
+    - gcov
 
 before_install:
 
