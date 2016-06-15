@@ -1,5 +1,7 @@
 
 UTAPPNAME=utest
+CFLAGS=-Wall -DCXXTEST_RUNNING -fprofile-arcs -ftest-coverage
+INCLUDES=-Icxxtest -Isrc
 
 .PHONY: unittest.cpp
 unittest.cpp: UT/ut*.hpp
@@ -8,12 +10,12 @@ unittest.cpp: UT/ut*.hpp
 	
 build_ut: unittest.cpp
 	@echo "Compiling test" 
-	${CXX} -std=c++11 -o ${UTAPPNAME} -DCXXTEST_RUNNING -Icxxtest -Isrc unittest.cpp src/*.cpp
+	${CXX} ${CFLAGS} -std=c++11 -o ${UTAPPNAME} ${INCLUDES}  unittest.cpp src/*.cpp
 		
-exec_ut:
+run_ut:
 	./$(UTAPPNAME)
 
-ut: build_ut exec_ut
+ut: build_ut run_ut
 
 clean:
 	rm -rf unittest.cpp
