@@ -15,13 +15,15 @@ addons:
     - gcc-4.8
     - g++-4.8
     - valgrind
+    - python3
 
 before_install:
+  - sudo apt-get update
 
 install: 
   - pip install cpp-coveralls
   - gem install coveralls-lcov	
-  
+
 before_script:
   - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
   - $CXX --version
