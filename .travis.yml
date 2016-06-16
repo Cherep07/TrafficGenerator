@@ -35,5 +35,5 @@ script:
   - make ut
 
 after_success:
-  - coveralls --exclude UT --exclude cxxtest --gcov-options '\-lp'
+  - coveralls --exclude UT --exclude cxxtest --exclude unittest.cpp --gcov-options '\-lp'
   - bash <(curl -s https://codecov.io/bash)
