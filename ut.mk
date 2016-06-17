@@ -10,7 +10,7 @@ unittest.cpp: UT/ut*.hpp
 	
 build_ut: unittest.cpp
 	@echo "Compiling test" 
-	${CXX} ${CFLAGS} -std=c++11 -o ${UTAPPNAME} ${INCLUDES}  unittest.cpp src/*.cpp
+	${CXX} ${CFLAGS} -std=c++14 -o ${UTAPPNAME} ${INCLUDES}  unittest.cpp src/*.cpp
 		
 run_ut:
 	./$(UTAPPNAME)

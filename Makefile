@@ -9,11 +9,12 @@ default:
 	@echo "    clean    - clean all targets"
 
 SRCDIR=src
-CFLAGS=-Wall -Weffc++
-		
+STD=-std=c++14
+CFLAGS=${STD} -Wall -Weffc++	
 $(APPNAME): ${SRCDIR}/*.cpp
-	$(CXX) -std=c++11 ${CFLAGS} -o $@ $^  
-		
+	$(CXX)  ${CFLAGS} -o $@ $^  
+
+#include ut.mk	
 exec:
 	./$(APPNAME)
 

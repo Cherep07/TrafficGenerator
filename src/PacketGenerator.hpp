@@ -16,6 +16,6 @@ class PacketGenerator
 		char * generate(int);
 	private:
 		GeneratorType generator;
-		char * buffer;
+		std::unique_ptr<char[]> buffer;
 };
 #endif // PACKET_GENERATOR_HPP
