@@ -5,7 +5,7 @@
 #include <memory>
 #include "GlobalDefs.hpp"
 
-char* SimpleTestTrafficGenerator(int, char*);
+void SimpleTestTrafficGenerator(int, char*);
 
 class PacketGenerator
 {

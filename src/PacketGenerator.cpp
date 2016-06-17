@@ -1,9 +1,9 @@
 
 #include "PacketGenerator.hpp"
 
-char* SimpleTestTrafficGenerator(int packetNumber, char* buffer)
+void SimpleTestTrafficGenerator(int packetNumber, char* buffer)
 {
-	return buffer;
+	*(int*)buffer = packetNumber;
 }
 
 
@@ -16,7 +16,6 @@ PacketGenerator::PacketGenerator(GeneratorType p_generator, int bufferSize):
 
 PacketGenerator::~PacketGenerator()
 {
-	//delete[] buffer;
 }
 
 char * PacketGenerator::generate(int packetNumber)
