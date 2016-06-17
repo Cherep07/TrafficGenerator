@@ -1,12 +1,26 @@
 
 #include "PacketGenerator.hpp"
 
-PacketGenerator::PacketGenerator(std::function<char* (int)> p_generator):
+char* SimpleTestTrafficGenerator(int packetNumber, char* buffer)
+{
+	return buffer;
+}
+
+
+PacketGenerator::PacketGenerator(GeneratorType p_generator, int bufferSize):
 	generator(p_generator)
-{}
+{
+	buffer = new char[bufferSize];
+}
+
+PacketGenerator::~PacketGenerator()
+{
+	delete[] buffer;
+}
 
 char * PacketGenerator::generate(int packetNumber)
 {
-	return generator(packetNumber);
+	generator(packetNumber, buffer);
+	return buffer;
 }
 

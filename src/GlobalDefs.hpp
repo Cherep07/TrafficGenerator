@@ -2,6 +2,10 @@
 #ifndef GLOBAL_DEFS_HPP
 #define GLOBAL_DEFS_HPP
 
+#include <functional>
+
+using GeneratorType=std::function<void (int, char*)>;
+
 class NonCopyable
 {
 	public:
