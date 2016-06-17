@@ -10,7 +10,7 @@ compiler:
 addons:
   apt:
     sources:
-	- llvm-toolchain-precise
+    - llvm-toolchain-precise
     - ubuntu-toolchain-r-test
     packages:
     - gcc-4.9
