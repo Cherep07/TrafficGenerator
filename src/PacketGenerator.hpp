@@ -4,6 +4,7 @@
 
 #include <memory>
 #include "GlobalDefs.hpp"
+#include <iostream>
 
 void SimpleTestTrafficGenerator(int, char*);
 
@@ -12,7 +13,8 @@ class PacketGenerator
 	public:
 		PacketGenerator() = delete;
 		PacketGenerator(GeneratorType, int);
-		~PacketGenerator();
+		virtual ~PacketGenerator();
+		virtual void operator()() = delete;
 		char * generate(int);
 	private:
 		GeneratorType generator;

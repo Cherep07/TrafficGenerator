@@ -19,7 +19,8 @@ ClientThread::ClientThread():
 	currntPacketNumber(0), 
 	packetGenerator(nullptr),
 	params()
-{}
+{
+}
 		
 
 ClientThread::~ClientThread()
