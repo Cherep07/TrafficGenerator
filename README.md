@@ -8,3 +8,7 @@
 <a href="https://codecov.io/gh/Cherep07/TrafficGenerator">
   <img src="https://codecov.io/gh/Cherep07/TrafficGenerator/branch/master/graph/badge.svg" alt="Codecov" />
 </a>
+<a href="https://scan.coverity.com/projects/cherep07-trafficgenerator">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/9227/badge.svg"/>
+</a>
