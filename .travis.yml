@@ -26,7 +26,7 @@ addons:
     notification_email: cherepanov.artyom@gmail.com
     build_command_prepend: "make"
     build_command:   "make ut"
-    branch_pattern: coverity_scan
+    branch_pattern: master
 
 before_install:
   - sudo apt-get update
