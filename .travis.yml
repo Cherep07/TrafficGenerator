@@ -25,7 +25,7 @@ addons:
       description: "<Your project description here>"
     notification_email: cherepanov.artyom@gmail.com
     build_command_prepend: "make"
-    build_command:   "make ut"
+    build_command:   "make tgr"
     branch_pattern: master
 
 before_install:
@@ -41,7 +41,6 @@ before_script:
   - echo $CXX 
 
 script:
-  - make
   - make tgr
   - make ut
 
