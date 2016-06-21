@@ -6,6 +6,10 @@ os:
 compiler:
   - gcc
   
+env:
+  global:
+    - secure: "FXnPHUkNPa8lyIMG7xqQZkyQ4s8jqJB32EgR8Gg+b/VnIOHgR4Rq2seHpIaRkQD+1yAZJoN3yjNo+rSbmUwdG9+XE+lrYPZZIhT6Vf07Sb5NYzCUTs13ovWnzbn7Ci37LHQrP46poP0vUFzCTg/PiPy7Y0Jza3AdZwp/AzNpyG+ZF5bbl75Vt+a3P92qq9nC9jiemR4aRQu9RVmTntrTVOxLo1kBu808BtP/FtK4nrZhxbg4hyBw3ynLUOacAfo80IVbVZRioUhsBl8mG0/HD6ohqO/iPWKejwUeFOLVKpWoVvJJ+gPfFYpxAf5Y+Q0LVTCawM+BFksA25DTBfVDLfChThSw1TIIFhbszp1hJeOOFdaNRQPsCl8LmqduaU5aldZBV5KYCE/wGAazVsw1UfqlZyDhJoOxm+T9kdo9Kh4LAk+Fbkk9W1aoa+sQDHtBglk3DxOa2+vySEvy6hAfSb9oKwbXel+22reZGLmo+bT5MhvObyXz9CYZOwlMYhIy7kTauVyD2yefLZH3HZnMYO8+6YbaXWfPc7ucIu4t46r3xqeAv9nhY0GBiWFkuxBoyGvG/wWa8sEZ2k40jRtOHp19y0aHsmJR/wc5GZKskMLQX9DtHu27em9NpGFrk4GSh+LmuDfN7gU1ALB68TQIGsR2BjvLwCbdkRTyEIV0Ry4="
+
 addons:
   apt:
     sources:
