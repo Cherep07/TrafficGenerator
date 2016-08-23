@@ -1,9 +1,9 @@
 
 #include "main.hpp"
+#include "Logger.hpp"
 #include "Configurator.hpp"
-#include <iostream>
+#include "PacketGenerator.hpp"
 
-#define LOG(SEVERITY)  std::cout << std::endl << "(SEVERITY) "
 
 #ifndef CXXTEST_RUNNING
 int main(void)
@@ -12,7 +12,12 @@ int main(void)
 	configurator.readCommandLine();
 	configurator.readConfig();
 	
-	LOG(INFO) << "init done 2";
+    LOG(INFO) << "init done";
+
+    PacketGenerator testGenerator(SimpleTestTrafficGenerator, 100);
+
+    LOG(INFO) << testGenerator.generate(555);
+
 	std::cout << std::endl;
 	return 0;
 }
